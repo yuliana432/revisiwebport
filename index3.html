@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Menautkan file CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        /* Menghapus margin dan padding default */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+    scroll-behavior: smooth;
+}
+
+/* Menambahkan sticky navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%; /* Pastikan navbar memiliki lebar penuh */
+    background-color: #212529; /* Atur warna background */
+}
+
+/* Mengatur agar navbar tidak terpotong saat di-scroll */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+        .carousel-inner {
+            position: relative;
+          width: 100%; 
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .banner img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Gambar menutupi seluruh ruang */
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        /* Container untuk background hitam */
+        .black-background {
+            background-color: rgb(7, 2, 18);
+            color: white; /* Membuat teks di dalamnya berwarna putih */
+            width: 100%;
+            position: relative; /* Untuk memungkinkan logo diposisikan di atasnya */
+            min-height: 100vh; /* Pastikan background hitam mengisi seluruh layar */
+            padding-top: 70px; /* Memberikan ruang agar logo dan konten lain tidak saling tumpang tindih */
+            text-align: center; /* Menempatkan konten secara horizontal di tengah */
+        }
+
+        /* Styling untuk logo yang ditempatkan di atas background hitam */
+        .logo-container {
+            position: relative; /* Agar logo bisa diposisikan di atas background hitam */
+            z-index: 2; /* Memastikan logo berada di atas elemen lain */
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .content {
+          text-align: center;
+            padding-top: 20px; /* Memberikan jarak antara logo dan teks */
+        } 
+
+        /* Agar badge berada di luar kotak, di pojok kanan atas */
+.box {
+    position: relative; /* Agar elemen di dalamnya bisa diposisikan relatif terhadap box */
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 10;
+    color: black; /* Menambahkan warna hitam pada teks */
+}
+
+.row {
+    margin-left: 15px; /* Sesuaikan dengan jarak yang diinginkan */
+    margin-right: 15px; /* Menambahkan jarak pada sisi kanan */
+}
+
+.about-section{
+    padding-bottom: 50px;
+}
+
+
+
+footer .col-md-4 {
+    margin-left: -80px;  /* Menambah jarak kiri pada kolom keempat */
+}
+
+
+.container-colom{
+    margin-left: -10px;
+}
+
+footer .col-md-4 {
+    margin-left: 80px;  /* Menambah jarak kiri agar kolom 4 tidak bertumpuk dengan section sebelumnya */
+}
+
+.custom-search-width {
+    width: 400px; /* Atur lebar sesuai kebutuhan */
+}
+
+.subscribe-btn {
+        border: 2px solid white; /* Menambahkan border putih */
+    }
+
+    .subscribe-btn:hover {
+        border-color: white; /* Warna border berubah jadi putih saat hover */
+    }
+
+    /* Menambahkan gaya untuk garis footer */
+    .footer-line {
+        border: 0;
+        border-top: 2px solid white; /* Garis putih */
+        margin: 20px 0; /* Jarak atas dan bawah garis */
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+     <div class="navbar">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="IMAGE/logos/logo.png" alt="Logo" width="60" height="40">PrimeWay Travel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Other</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                            <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+                            <li><a class="dropdown-item" href="#sosmed">Sosmed</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button type="button" class="btn btn-dark btn btn-outline-light text-light">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!--slideshow/carousel -->
+    <div id="home" class="home-section"></div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="IMAGE/carousel/carousel3.jpg" alt="Los Angeles" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="IMAGE/carousel/carousel4.jpg" alt="Chicago" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="IMAGE/carousel/carousel2.jpg" alt="New York" class="d-block w-100">
+      </div>
+      <div class="carousel-caption">
+        <h2><b>Raja Ampat-Indonesia</b></h2>
+        <p>Discover the breathtaking paradise of Raja Ampat, Indonesia, where crystal-clear waters, vibrant coral reefs, and untouched islands create a haven for divers and nature lovers alike.</p>
+
+      </div>
+    </div>
+  
+    <!-- mengontrol kanan kiri icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+    <!-- Background hitam di bawah banner dengan logo -->
+    <div class="black-background">
+        <!-- Logo berada di atas background hitam -->
+        <div class="logo-container">
+            <img src="IMAGE/vacation.png" alt="Logo">
+        </div>
+
+        <!-- Konten tambahan setelah logo -->
+<div class="content">
+    <h2>✨PrimeWay Travel✨</h2>
+    <p>Discover unforgettable journeys with <span style="color: rgb(240, 84, 28);">PrimeWay Travel</span>, where every trip is crafted of adventure, comfort, and extraordinary experiences!</p>
+</div>
+<!-- Tiga kotak container di bawah konten -->
+<div class="black-background">
+    <div class="container-fluid mt-0">
+        <div class="row">
+            <!-- Kotak 1 -->
+            <div class="col-md-4 d-flex">
+                <div class="box p-3 text-center bg-white text-dark flex-fill d-flex flex-column">
+                    <span class="badge rounded-pill" style="background-color: #e2af15;">$75</span>
+                    <h5><b>🌏Adventure Explorer Package🏕</b></h5>
+                    <p>Experience the thrill of adventure in Bali, Lombok, and Labuan Bajo! Trek Mount Rinjani, snorkel in Gili Trawangan, and see Komodo dragons up close.</p>
+                    <!-- Tombol Hitam yang mengarah ke halaman baru -->
+                    <a href="https://yourlink1.com" class="btn btn-dark text-white mt-auto" target="_blank">Go Somewhere</a>
+                </div>
+            </div>
+            <!-- Kotak 2 -->
+            <div class="col-md-4 d-flex">
+                <div class="box p-3 text-center bg-white text-dark flex-fill d-flex flex-column">
+                    <span class="badge rounded-pill" style="background-color: #e2af15;">$150</span>
+                    <h4><b>✨Luxury Escape Package🌴</b></h4>
+                    <p>Enjoy an exclusive getaway to Paris, Switzerland, and Santorini. Stay in 5-star hotels, explore iconic landmarks, and indulge in VIP services for a truly luxurious experience.</p>
+                    <!-- Tombol Hitam yang mengarah ke halaman baru -->
+                    <a href="https://yourlink1.com" class="btn btn-dark text-white mt-auto" target="_blank">Go Somewhere</a>
+                </div>
+            </div>
+            <!-- Kotak 3 -->
+            <div class="col-md-4 d-flex">
+                <div class="box p-3 text-center bg-white text-dark flex-fill d-flex flex-column">
+                    <span class="badge rounded-pill" style="background-color: #e2af15;">$150</span>
+                    <h4><b>👶🏻Family Fun Holiday Package</b></h4>
+                    <p>Create unforgettable family moments in Singapore, Malaysia, and Thailand! Visit theme parks, explore city attractions, and enjoy a hassle-free vacation with family-friendly services.</p>
+                    <!-- Tombol Hitam yang mengarah ke halaman baru -->
+                    <a href="https://yourlink1.com" class="btn btn-dark text-white mt-auto" target="_blank">Go Somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- About Content -->
+ <h2>About</h2>
+<div id="about" class="about-content">
+<div class="about-content">
+    <div class="container">
+        <!-- Who We Are Section -->
+        <div class="about-section">
+            <h2>Who We Are</h2>
+            <p>At PrimeWay Travel, we are passionate about crafting unforgettable travel experiences. Our company was founded with the vision of bringing people closer to the beauty of the world through tailor-made travel packages. From breathtaking beaches to remote mountain peaks, we provide guided tours that cater to your every need, ensuring your travel adventure is smooth, safe, and truly memorable. Whether you're an adrenaline junkie, a nature lover, or someone seeking a peaceful retreat, we have something for everyone.</p>
+        </div>
+
+        <!-- Our Mission & Vision Section -->
+        <div class="about-section">
+            <h2>Our Mission & Vision</h2>
+            <p><b>Mission:</b> To create personalized travel experiences that inspire adventure and discovery while ensuring comfort, safety, and sustainability. We believe that every journey is a chance to explore new cultures, meet people from different walks of life, and experience the beauty of nature.</p>
+            <p><b>Vision:</b> To be the leading travel agency that brings people closer to their dream destinations, offering not only vacations but transformative travel experiences that go beyond ordinary tourism.</p>
+        </div>
+
+        <!-- Meet Our Team Section -->
+<div class="about-section">
+    <h2>Meet Our Team</h2>
+    <p>Our team of travel experts is dedicated to making your travel dreams come true. Each member of our team brings unique expertise in travel planning, customer service, and cultural knowledge. Together, we work to ensure that every trip with PrimeWay Travel exceeds expectations.</p>
+    <div class="team" style="display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap;">
+        <div class="team-member">
+            <div class="card" style="width: 300px;">
+                <img class="card-img-top" src="IMAGE/team/1.jpg" width="100px" height="200px" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">CEO & Founder</p>
+                    <p class="card-text">John’s passion for travel led him to start PrimeWay Travel. With over 20 years of experience in the tourism industry, he is dedicated to curating unforgettable experiences for travelers worldwide.</p>
+                    <!-- Gantilah link di href untuk mengarah ke profil John -->
+                    <a href="https://yourwebsite.com/john-doe-profile" class="btn btn-primary" target="_blank">See Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card" style="width: 300px;">
+                <img class="card-img-top" src="IMAGE/team/2.jpg" width="100px" height="200px" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Smith</h4>
+                    <p class="card-text">Lead Travel Consultant</p>
+                    <p class="card-text">Jane specializes in creating customized itineraries that blend adventure with relaxation. She works closely with clients to ensure that every trip is perfectly tailored to their preferences.</p>
+                    <!-- Gantilah link di href untuk mengarah ke profil Jane -->
+                    <a href="https://yourwebsite.com/jane-smith-profile" class="btn btn-primary" target="_blank">See Profile</a>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card" style="width: 300px;">
+                <img class="card-img-top" src="IMAGE/team/3.jpg" width="100px" height="200px" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Alex Lee</h4>
+                    <p class="card-text">Tour Guide Manager</p>
+                    <p class="card-text">Alex oversees our team of expert tour guides, ensuring that each tour is informative, engaging, and safe. With a background in history and cultural studies, Alex brings the destinations to life for travelers.</p>
+                    <!-- Gantilah link di href untuk mengarah ke profil Alex -->
+                    <a href="https://yourwebsite.com/alex-lee-profile" class="btn btn-primary" target="_blank">See Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+        <!-- Our Values Section (Optional) -->
+        <div class="about-section">
+            <h2>Our Values</h2>
+            <p>At PrimeWay Travel, we live by values that guide us in every decision we make. We believe in:</p>
+            <ul>
+                <li><strong>Sustainability:</strong> We aim to reduce the environmental impact of tourism and promote responsible travel.</li>
+                <li><strong>Adventure:</strong> Every trip is an opportunity for new experiences and growth.</li>
+                <li><strong>Customer Care:</strong> Our clients are at the heart of everything we do, and we go the extra mile to ensure they have an unforgettable trip.</li>
+                <li><strong>Local Experiences:</strong> We prioritize local culture and ensure our tours support local communities.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="contact-section">
+<div class="contact-section">
+    <div class="row">
+        <h2 class="text-center">Contact Us</h2>
+    <p class="text-center">Have questions or need assistance? Feel free to reach out!</p>
+        <div class="col-md-6">
+            <h4>Get in Touch</h4>
+            <form action="#">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h4>Our Office</h4>
+            <p>1234 PrimeWay Street, City, Country</p>
+            <p>Email: info@primewaytravel.com</p>
+            <p>Phone: +123-456-7890</p>
+        </div>
+    </div>
+</div><br>
+
+<!-- Gallery Section -->
+ <div class="gallery-section">
+<div id="gallery" class="container my-5">
+    <h2 class="text-center">Our Gallery</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="IMAGE/portfolio/gallery1.jpg" class="img-fluid" alt="Gallery Image 1">
+        </div>
+        <div class="col-md-4">
+            <img src="IMAGE/portfolio/gallery10.jpg" class="img-fluid" alt="Gallery Image 2">
+        </div>
+        <div class="col-md-4">
+            <img src="IMAGE/portfolio/gallery11.jpg" class="img-fluid" alt="Gallery Image 3">
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <img src="IMAGE/portfolio/gallery12.jpg" class="img-fluid" alt="Gallery Image 4">
+        </div>
+        <div class="col-md-4">
+            <img src="IMAGE/portfolio/gallery13.jpg" class="img-fluid" alt="Gallery Image 5">
+        </div>
+        <div class="col-md-4">
+            <img src="IMAGE/portfolio/gallery1.jpg" class="img-fluid" alt="Gallery Image 6">
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer class="bg-dark text-white py-4">
+    <div class="container-colom">
+        <div class="row d-flex justify-content-start">
+            <!-- Kolom 1 -->
+            <div class="col-md-2 px-2">
+                <h5>Section</h5>
+                <p>Home</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>FAQs</p>
+                <p>About</p>
+            </div>
+            <!-- Kolom 2 -->
+            <div class="col-md-2 px-2">
+                <h5>Section</h5>
+                <p>Home</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>FAQs</p>
+                <p>About</p>
+            </div>
+            <!-- Kolom 3 -->
+            <div class="col-md-2 px-2">
+                <h5>Section</h5>
+                <p>Home</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>FAQs</p>
+                <p>About</p>
+            </div>
+
+            <!-- Kolom 4 dengan tombol di sebelah kanan -->
+<div class="col-md-4 d-flex flex-column align-items-start px-2">
+    <h5 class="text-left">Special Offers</h5>
+    <p class="text-left">Check out our latest travel deals!</p>
+    
+    <!-- Tombol yang berdampingan -->
+    <div class="d-flex">
+        <!-- Input Search dengan kelas kustom -->
+        <input class="form-control me-2 custom-search-width" type="text" placeholder="Email addres">
+        <button type="button" class="btn btn-dark btn btn-outline-light text-light">Subscribe</button>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Garis Pemisah (hr) di bawah footer content -->
+<hr class="footer-line"> <!-- Menambahkan garis -->
+
+<!-- Ikon Media Sosial di bagian bawah tengah footer -->
+<div class="text-center mt-4">
+    <section id="sosmed" class="container my-5">
+        <h5>Follow Us</h5>
+        <div>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <!-- Twitter -->
+            <a href="https://twitter.com/yourprofile" target="_blank" class="text-white mx-2">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-white mx-2">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- Teks footer paling bawah di tengah -->
+<div class="text-center mt-4">
+    <p>&copy; 2025 Your Company. All Rights Reserved.</p> <!-- Teks footer -->
+
+</div>
+</div>
+</footer>
+
+    <!-- Menautkan file JS Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
