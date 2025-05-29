@@ -1,0 +1,354 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    text-align: justify;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans",sans-serif;
+}
+p {
+    text-align: justify;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+p {
+    text-align: justify;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+    font-family: courier;
+    color: black;
+}
+
+.menu {
+    float: right;
+}
+
+.navbar {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 80px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.link a {
+    font-weight: 500;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.link a:hover {
+    color: var(--primary-color);
+}
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.kolom {
+    margin-top: 50px;
+    margin-bottom: 50;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "comic sans-ms";
+    color: black;
+}
+
+h2 {
+    font-family: "comic sans-ms";
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: black;
+    width: 100px;
+    line-height: 50px;
+}
+
+a.tbl-biru {
+    background: black;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 20px;
+    color:aqua;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.tbl-biru:hover {
+    background: red;
+    text-decoration: none;
+}
+
+a.tbl-pink {
+    background: blue;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.tengah {
+    text-align: center;
+    width: 100%;
+}
+
+.tutor-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kartu-tutor {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-tutor img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.kartu-tutor p {
+    font-family: "comic sans ms";
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+.client{
+    background-color: var(--extra-light);
+}
+
+.client__grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.client__card{
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+client__card img{
+    max-width: 80px;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 100%;
+}
+
+.client__card p{
+    text-align: center;
+    color: far(--text-dark);
+}
+
+.gambar {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: backgroun-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.navbar {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    align-self: center;
+}
+
+.logo {
+    width: 80px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin : 8.5px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+    padding: 15px;
+}
+
+li a:hover {
+    background: white;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.nabar-2 ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 8.5px;
+}
+
+.navbar-2 ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+}
+
+li a:hover {
+    background: white;
+    transition: 0.5s;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.gambar-candi {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px;
+}
